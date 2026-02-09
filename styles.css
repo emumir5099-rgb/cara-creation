@@ -617,67 +617,57 @@ footer .copyright a:hover {
 }
 /*Responsive Style*/
 @media (max-width: 576px) {
+    /* বডি স্ক্রল ফিক্স - ডানে বামে নড়বে না */
+    body {
+        overflow-x: hidden;
+    }
+
     .section-p1 {
-        padding: 20px !important;
+        padding: 40px 20px !important;
     }
 
-    #hero {
-        padding: 0 20px;
-        background-position: 55%; 
-        height: 60vh;
-    }
-    #hero h1 { font-size: 32px; }
-    #hero h2 { font-size: 28px; }
-
-    #feature {
-        justify-content: center;
-    }
-    #feature .fe-box {
-        margin: 10px;
+    /* ব্যানার বক্স ফিক্স (আপনার লাইভ সাইটে এটিই প্রধান সমস্যা) */
+    #sm-banner .banner-box {
+        width: 100% !important;
+        min-width: 100% !important;
+        height: 30vh;
+        margin-bottom: 20px;
     }
 
+    #banner3 .banner-box {
+        width: 100% !important;
+        min-width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    /* প্রোডাক্ট কার্ড রেসপনসিভ */
     #product1 .pro {
         width: 100% !important;
         margin: 15px 0;
     }
 
-    #sm-banner .banner-box {
-        width: 100% !important;
-        min-width: 100% !important;
-        height: 40vh;
-        margin-bottom: 20px;
-    }
-
-    #banner3 {
-        padding: 0 20px;
-    }
-    #banner3 .banner-box {
-        width: 100% !important;
-        min-width: 100% !important;
-    }
-
+    /* নিউজলেটার (লাইভ সাইটের ডিজাইন অনুযায়ী) */
     #newsletter .form {
         display: flex;
-        flex-direction: column; 
-        width: 100% !important;
+        flex-direction: column;
+        width: 100%;
     }
+
     #newsletter input {
         width: 100% !important;
-        border-radius: 4px !important; 
         margin-bottom: 10px;
+        border-radius: 4px !important;
     }
+
     #newsletter button {
         width: 100% !important;
         border-radius: 4px !important;
     }
 
+    /* ফুটার ফিক্স */
     footer .col {
         width: 100%;
         margin-bottom: 30px;
-        text-align: center;
-        align-items: center;
-    }
-    footer .copyright {
-        text-align: center;
+        text-align: left;
     }
 }
