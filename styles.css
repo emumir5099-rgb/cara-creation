@@ -617,36 +617,33 @@ footer .copyright a:hover {
 }
 /*Responsive Style*/
 @media (max-width: 576px) {
-    /* বডি স্ক্রল ফিক্স - ডানে বামে নড়বে না */
-    body {
+    /* ১. পুরো বডি যেন ডানে-বামে না নড়ে */
+    html, body {
         overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    .section-p1 {
-        padding: 40px 20px !important;
-    }
-
-    /* ব্যানার বক্স ফিক্স (আপনার লাইভ সাইটে এটিই প্রধান সমস্যা) */
-    #sm-banner .banner-box {
-        width: 100% !important;
-        min-width: 100% !important;
-        height: 30vh;
-        margin-bottom: 20px;
+    /* ২. ব্যানার ৩ (Seasonal Sale) এর বক্সগুলো ছোট করা */
+    #banner3 {
+        padding: 0 20px !important;
     }
 
     #banner3 .banner-box {
-        width: 100% !important;
-        min-width: 100% !important;
+        width: 100% !important; /* স্ক্রিনের বাইরে যাবে না */
         margin-bottom: 20px;
     }
 
-    /* প্রোডাক্ট কার্ড রেসপনসিভ */
-    #product1 .pro {
-        width: 100% !important;
-        margin: 15px 0;
+    /* ৩. ফুটার সেকশন - অ্যাপ ইন্সটল ইমেজগুলো ফিক্স করা */
+    footer .install .row img {
+        border: 1px solid #088178;
+        border-radius: 6px;
+        width: 120px; /* ইমেজের সাইজ ছোট করা হলো */
+        margin: 5px 0;
     }
 
-    /* নিউজলেটার (লাইভ সাইটের ডিজাইন অনুযায়ী) */
+    /* ৪. নিউজলেটার ইনপুট ও বাটন */
     #newsletter .form {
         display: flex;
         flex-direction: column;
@@ -662,12 +659,5 @@ footer .copyright a:hover {
     #newsletter button {
         width: 100% !important;
         border-radius: 4px !important;
-    }
-
-    /* ফুটার ফিক্স */
-    footer .col {
-        width: 100%;
-        margin-bottom: 30px;
-        text-align: left;
     }
 }
